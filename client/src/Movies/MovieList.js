@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const MovieList = props => {
+
+export const MovieList = props => {
   const [movies, setMovies] = useState([])
   useEffect(() => {
     const getMovies = () => {
@@ -27,7 +28,7 @@ const MovieList = props => {
   );
 }
 
-function MovieDetails({ movie }) {
+export function MovieDetails({ movie }) {
   const { title, director, metascore, stars } = movie;
   return (
     <div className="movie-card">
